@@ -16,7 +16,7 @@ The application allows users to securely log in, deposit money, withdraw cash, t
 The project is built using **Object-Oriented Programming (OOP)** and follows a **Three-Tier Architecture**.  
 
 
-Customer and transaction data are stored in **Excel files using EPPlus**.  
+Customer and transaction data are stored in **Excel files using EPPlus Need inslation**.  
 
 
 This project was developed to improve desktop application development and software architecture skills.  
