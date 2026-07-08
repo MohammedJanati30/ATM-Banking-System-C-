@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3DB8A92A-8269-4E15-BCE4-930177BAF855}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>windosformATM</RootNamespace>
+    <AssemblyName>windosformATM</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=8.6.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.8.6.1\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=8.4.0.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.8.4.0\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.3.0.1\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Xml, Version=8.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Xml.8.0.3\lib\net462\System.Security.Cryptography.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClssLoadDataHistory.cs" />
+    <Compile Include="Deposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deposit.Designer.cs">
+      <DependentUpon>Deposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowHistory.Designer.cs">
+      <DependentUpon>ShowHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Showbalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Showbalance.Designer.cs">
+      <DependentUpon>Showbalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clsTransactionAddToHistory.cs" />
+    <Compile Include="clsATMService.cs" />
+    <Compile Include="ClsBalance.cs" />
+    <Compile Include="clsPersone.cs" />
+    <Compile Include="clsTransfer.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quick With Draw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quick With Draw.Designer.cs">
+      <DependentUpon>Quick With Draw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfer.Designer.cs">
+      <DependentUpon>Transfer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Deposit.resx">
+      <DependentUpon>Deposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowHistory.resx">
+      <DependentUpon>ShowHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quick With Draw.resx">
+      <DependentUpon>Quick With Draw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Showbalance.resx">
+      <DependentUpon>Showbalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer.resx">
+      <DependentUpon>Transfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-male-circle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11285820.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6141715.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5449193.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-illustration_7023-330633.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10789215.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10704236.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5132799.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\51327991.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1000_F_215157089_jFL4eYMUthtr6oJFDkrRJLI7O0EOSek1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo-atm-credit-debit-card-clipping-path-included-atm-background-finance-banking-concept_175994-22792.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banking-technology-concept-design-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bank-video-design-template-13d962e69f1e283e6f1491358e8fed01_screen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abstract-white-background-with-copy-space-right-minimal-vector-illustration_773922-32554.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abstract-blue-background-of-bank-building-and-pile-of-money-cash-with-world-map-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-money-3d-illustrations-modern-icon-png-image_12920733.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9918684.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1943830996-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account-number-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5582931.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atm-cash-withdrawal-line-connection-low-poly-wireframe-design-abstract-geometric-background_42421-1318.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1000_F_1000192504_d5YUFiaFKYuUbuKfejvTdzlF0sDXOaAD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the-station-automatic-machines-2KA5C9N.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo-atm-credit-debit-card-clipping-path-included-atm-background-finance-banking-concept_175994-23151.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bust-in-silhouette_1f464.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\474548.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flat-icon-phone-free-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location-icon-free-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location-icon-free-vector1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15445793.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\137625.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9471855.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\107042361.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2721121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bank-icon-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abstract-blue-background-of-bank-building-and-pile-of-money-cash-with-world-map-vector1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8213456.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
